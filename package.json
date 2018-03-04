@@ -5,6 +5,10 @@
     "version": "18.2.0",
     "publisher": "wk-j",
     "icon": "images/Icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wk-j/vscode-rainbow-string"
+    },
     "engines": {
         "vscode": "^1.20.0"
     },
