@@ -1,9 +1,10 @@
 {
     "name": "vscode-rainbow-string",
-    "displayName": "VsCodeRainBowString",
-    "description": "",
-    "version": "0.0.1",
+    "displayName": "Rainbow String",
+    "description": "Add rainbow effect to quoted string",
+    "version": "18.2.0",
     "publisher": "wk-j",
+    "icon": "images/Icon.png",
     "engines": {
         "vscode": "^1.20.0"
     },
@@ -11,17 +12,10 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "*"
     ],
     "main": "./out/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
-            }
-        ]
-    },
+    "contributes": {},
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",

@@ -1,24 +1,17 @@
-'use strict';
-import * as vscode from 'vscode';
+import * as vscode from 'vscode'
+import { rainborColors } from "./rainbow";
+import { decorate } from './decorator';
 
 export function activate(context: vscode.ExtensionContext) {
-
     console.log('Congratulations, your extension "vscode-rainbow-string" is now active!');
 
-    let disposable = vscode.commands.registerCommand('extension.sayHello', () => {
-        vscode.window.showInformationMessage('Hello World!');
-    });
+    vscode.workspace.onDidSaveTextDocument(e => {
+        decorate()
+    })
 
-    let rainbow = vscode.window.createTextEditorDecorationType({
-        //
-    });
-
-    vscode.workspace.onDidChangeTextDocument(event => {
-
-    });
-
-    context.subscriptions.push(disposable);
+    vscode.workspace.onDidOpenTextDocument(e => {
+        decorate()
+    })
 }
 
-export function deactivate() {
-}
+export function deactivate() { }
