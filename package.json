@@ -2,7 +2,7 @@
     "name": "vscode-rainbow-string",
     "displayName": "Rainbow String",
     "description": "Add rainbow effect to quoted string",
-    "version": "18.3.0",
+    "version": "18.3.1",
     "publisher": "wk-j",
     "icon": "images/Icon.png",
     "repository": {
@@ -19,7 +19,23 @@
         "*"
     ],
     "main": "./out/extension",
-    "contributes": {},
+    "contributes": {
+        "configuration": {
+            "title": "Rainbow string configuration",
+            "type": "object",
+            "properties": {
+                "rainbowString": {
+                    "type": "object",
+                    "properties": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
