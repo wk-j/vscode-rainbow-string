@@ -7,18 +7,19 @@ Add rainbow effect to quoted string
 ## Configurations
 
 ```json
-    "rainbowString": {
-        "extensions": [
-            ".cs",
-            ".csx",
-            ".fs",
-            ".fsx",
-            ".js",
-            ".fsx",
-            ".ts",
-            ".tsx",
-            ".csproj",
-            ".fsproj",
-            ".cake"
-        ]
+"rainbowString": {
+    "extensions": [
+        ".cs",
+        ".csx",
+        ".fs",
+        ".fsx",
+        ".js",
+        ".fsx",
+        ".ts",
+        ".tsx",
+        ".csproj",
+        ".fsproj",
+        ".cake"
+    ]
+}
 ```
