@@ -4,7 +4,9 @@ Add rainbow effect to quoted string
 
 ![](https://raw.githubusercontent.com/wk-j/vscode-rainbow-string/master/images/Rainbow.png)
 
-## Configurations
+## Configuration
+
+Add `rainbowString.extensions` to `settings.json`
 
 ```json
 "rainbowString": {
@@ -14,12 +16,11 @@ Add rainbow effect to quoted string
         ".fs",
         ".fsx",
         ".js",
-        ".fsx",
+        ".jsx",
         ".ts",
         ".tsx",
         ".csproj",
-        ".fsproj",
-        ".cake"
+        ".fsproj"
     ]
 }
 ```

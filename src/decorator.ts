@@ -14,7 +14,7 @@ export function decorate() {
     while ((match = regex.exec(text))) {
         let chars = [...match[1]]
 
-        if (chars.length > 6) {
+        if (chars.length > 0) {
             chars.forEach((_, i) => {
                 var matchIndex = match.index + 1
                 let rainbowIndex = i % colors.length
