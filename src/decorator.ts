@@ -18,7 +18,6 @@ export function decorate() {
             chars.forEach((_, i) => {
                 var matchIndex = match.index + 1
                 let rainbowIndex = i % colors.length
-                let rainbow = rainbows[rainbowIndex]
                 let startIndex = matchIndex + i
                 let endIndex = matchIndex + i + 1
                 let start = editor.document.positionAt(startIndex)
