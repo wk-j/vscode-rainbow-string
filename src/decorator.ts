@@ -3,7 +3,7 @@ import { rainborColors } from "./rainbow";
 
 let colors = Array.from(rainborColors)
 
-function getRandomInt(min, max) {
+function getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -14,10 +14,10 @@ export function decorate() {
     let regex = /(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')/g;
     let decorators = colors.map(color => [])
     let match: RegExpMatchArray;
-    let offset = getRandomInt(0, colors.length);
+    let offset: number = getRandomInt(0, colors.length);
 
     while ((match = regex.exec(text))) {
-        let chars = [...(match[1] || match[2])];
+        let chars: string[] = [...(match[1] || match[2])];
         offset--;
 
         if (chars.length > 0) {
