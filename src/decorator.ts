@@ -27,7 +27,7 @@ export function decorate() {
     let noCommentText = replaceComments(allText)
 
     let rainbows = colors.map(x => vscode.window.createTextEditorDecorationType({ color: x }))
-    let regex = /(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')/g;
+    let regex = /(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')|`([^`\\]*(?:\\.[^`\\]*)*)`)/g;
     let decorators = colors.map(color => [])
     let match: RegExpMatchArray;
     let offset: number = getRandomInt(0, colors.length);
