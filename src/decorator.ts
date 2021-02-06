@@ -3,6 +3,7 @@ import { rainborColors } from "./rainbow";
 import { clearLine } from "readline";
 
 let colors = Array.from(rainborColors)
+let rainbows = colors.map(x => vscode.window.createTextEditorDecorationType({ color: x }))
 
 function getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -26,8 +27,9 @@ export function decorate() {
     let allText = editor.document.getText()
     let noCommentText = replaceComments(allText)
 
-    let rainbows = colors.map(x => vscode.window.createTextEditorDecorationType({ color: x }))
-    let regex = /(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')|`([^`\\]*(?:\\.[^`\\]*)*)`)/g;
+    // let regex = /(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')|`([^`\\]*(?:\\.[^`\\]*)*)`)/g;
+    let regex = /(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')/g;
+
     let decorators = colors.map(color => [])
     let match: RegExpMatchArray;
     let offset: number = getRandomInt(0, colors.length);

@@ -1,12 +1,14 @@
-## Rainbow String
+<p align="center">
+    <img src="https://raw.githubusercontent.com/wk-j/vscode-rainbow-string/master/resource/logo.png" />
+</p>
 
-Add rainbow effect to quoted string
+# Add rainbow effect to quoted string
 
 [![Version](https://vsmarketplacebadge.apphb.com/version/wk-j.vscode-rainbow-string.svg)](https://marketplace.visualstudio.com/items?itemName=wk-j.vscode-rainbow-string) [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/wk-j.vscode-rainbow-string.svg)](https://marketplace.visualstudio.com/items?itemName=wk-j.vscode-rainbow-string)
 
 ![](https://raw.githubusercontent.com/wk-j/vscode-rainbow-string/master/images/Rainbow.png)
 
-## Configuration
+# Configuration
 
 Add `rainbowString.extensions` to `settings.json`
 
